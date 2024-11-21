@@ -82,10 +82,19 @@
         font-size: 1.3rem;
         margin-right: 10px;
 
+    @keyframes dropShadowPulse
+      0%
+        filter: drop-shadow(0 0 0.30rem var(--anzhiyu-white))
+      50%
+        filter: drop-shadow(0 0 0.80rem var(--anzhiyu-white))
+      100%
+        filter: drop-shadow(0 0 0.30rem var(--anzhiyu-white))
+
     .author-info-avatar 
       user-select: none
       img
-        filter: blur(0) brightness(1);
+        filter: drop-shadow(0 0 0.30rem var(--anzhiyu-white))
+        animation: dropShadowPulse 3s infinite ease-in-out
       .author-status
         position: absolute;
         bottom: 2px;
@@ -540,7 +549,7 @@ if hexo-config('aside.enable')
         min-height: 320px;
         position: relative;
       &::before
-        background: linear-gradient(-25deg,var(--anzhiyu-main),var(--anzhiyu-main-op-deep),var(--anzhiyu-main),var(--anzhiyu-main-op-deep));
+        background: var(--anzhiyu-main);
         background-size: 400%;
         position: absolute;
         width: 100%;

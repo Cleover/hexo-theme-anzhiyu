@@ -77,28 +77,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 700;
   padding-bottom: 6px;
 }
+
+.comment-barrage-item .barrageHead div {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .comment-barrage-item .barrageHead .barrageTitle {
-  color: var(--anzhiyu-card-bg);
-  margin-right: 8px;
-  background: var(--anzhiyu-fontcolor);
+  color: var(--anzhiyu-fontcolor);
   line-height: 1;
   padding: 4px;
   border-radius: 4px;
 }
 .comment-barrage-item .barrageHead .barrageTitle.barrageBloggerTitle {
-  background: var(--anzhiyu-orange);
+  background: var(--anzhiyu-main);
 }
 .comment-barrage-item .barrageAvatar {
-  width: 16px;
-  height: 16px;
+  width: 23px;
+  height: 23px;
   margin: 0;
-  margin-left: auto;
   margin-right: 8px;
   border-radius: 50%;
   background: var(--anzhiyu-secondbg);
+}
+.comment-barrage-item .barrageNick {
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: 8px;
 }
 .comment-barrage-item .barrageContent {
   font-size: 14px !important;

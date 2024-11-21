@@ -273,7 +273,7 @@ rm.copyPageUrl = function (url) {
     url = window.location.href;
   }
   rm.copyUrl(url);
-  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  anzhiyu.snackbarShow("Copied Link To Clipboard", false, 2000);
   rm.hideRightMenu();
 };
 
@@ -395,7 +395,7 @@ function addRightMenuClickEvent() {
     rm.hideRightMenu();
   });
 
-  document.getElementById("menu-translate").addEventListener("click", function () {
+  document.getElementById("menu-translate")?.addEventListener("click", function () {
     window.translateFn.translatePage();
     rm.hideRightMenu();
   });

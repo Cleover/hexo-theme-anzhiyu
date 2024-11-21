@@ -86,7 +86,7 @@
   -webkit-backdrop-filter: blur(20px);
   transform: translateZ(0);
   height: 40px;
-  width: 125px;
+  width: 140px;
   justify-content: center;
 }
 .topGroup .banner-button-group .banner-button .banner-button-text {
@@ -161,7 +161,7 @@
 .topGroup span.recent-post-top-text {
   position: absolute;
   top: 0;
-  left: -40px;
+  left: -100px;
   display: flex;
   z-index: 1;
   background: var(--anzhiyu-theme);

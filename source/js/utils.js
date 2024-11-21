@@ -416,15 +416,15 @@ const anzhiyu = {
     if (commentBarrage) {
       if (window.getComputedStyle(commentBarrage).display === "flex") {
         commentBarrage.style.display = "none";
-        anzhiyu.snackbarShow("✨ 已关闭评论弹幕");
-        document.querySelector(".menu-commentBarrage-text").textContent = "显示热评";
+        anzhiyu.snackbarShow("✨ Disabled Popup Comments");
+        document.querySelector(".menu-commentBarrage-text").textContent = "Hide Popup Comments";
         document.querySelector("#consoleCommentBarrage").classList.remove("on");
         localStorage.setItem("commentBarrageSwitch", "false");
       } else {
         commentBarrage.style.display = "flex";
-        document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
+        document.querySelector(".menu-commentBarrage-text").textContent = "Show Popup Comments";
         document.querySelector("#consoleCommentBarrage").classList.add("on");
-        anzhiyu.snackbarShow("✨ 已开启评论弹幕");
+        anzhiyu.snackbarShow("✨ Enabled Popup Comments");
         localStorage.removeItem("commentBarrageSwitch");
       }
     }
@@ -605,15 +605,15 @@ const anzhiyu = {
       let message = "";
 
       if (hour >= 0 && hour <= 5) {
-        message = "睡个好觉，保证精力充沛";
+        message = "Should you be sleeping?";
       } else if (hour > 5 && hour <= 10) {
-        message = "一日之计在于晨";
+        message = "Morning Already?";
       } else if (hour > 10 && hour <= 14) {
-        message = "吃饱了才有力气干活";
+        message = "Make sure to eat!";
       } else if (hour > 14 && hour <= 18) {
-        message = "集中精力，攻克难关";
+        message = "Good Evening!";
       } else if (hour > 18 && hour <= 24) {
-        message = "不要太劳累了，早睡更健康";
+        message = "Winding Down?";
       }
 
       return message;
@@ -1291,7 +1291,7 @@ const anzhiyu = {
     if (!$categoryBar) return;
 
     if (urlinfo === "/") {
-      $categoryBar.querySelector("#首页").classList.add("select");
+      $categoryBar.querySelector("#Home").classList.add("select");
     } else {
       const pattern = /\/categories\/.*?\//;
       const patbool = pattern.test(urlinfo);

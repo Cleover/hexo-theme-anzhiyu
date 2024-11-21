@@ -16,13 +16,13 @@
             .author-content-item-tips 音乐
             span.author-content-item-title 灵魂的碰撞💥
           else 
-            .author-content-item-tips 兴趣点
-            span.author-content-item-title 寻找你感兴趣的领域
+            .author-content-item-tips Topics
+            span.author-content-item-title Suggested Tags
             !=partial('includes/widget/card_console_tags', {}, {cache: true})
       .console-card.history
         .item-headline
           i.anzhiyufont.anzhiyu-icon-box-archiv
-          span 文章
+          span Archive
         !=partial('includes/widget/card_console_archives', {}, {cache: true})
   .button-group
     if theme.darkmode.enable

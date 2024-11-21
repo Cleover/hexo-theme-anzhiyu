@@ -1,4 +1,4 @@
-each value, title in theme.social
+each value, title in config.authors[page.author].social || {}
   a.social-icon.faa-parent.animated-hover(href=url_for(trim(value.split('||')[0])) target="_blank" title=title === undefined ? '' : trim(title))
     if value.split('||')[1]
       - var icon_value = trim(value.split('||')[1])

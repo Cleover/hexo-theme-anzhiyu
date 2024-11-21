@@ -49,9 +49,6 @@ header#page-header(class=`${isHomeClass}` style=home_index_img_bg)
           - var loadSubJs = true
           #site-subtitle
             span#subtitle
-        if(theme.social)
-          #site_social_icons
-            !=fragment_cache('social', function(){return partial('includes/header/social')})
       #scroll-down
         i.anzhiyufont.anzhiyu-icon-angle-down.scroll-down-effects
     else

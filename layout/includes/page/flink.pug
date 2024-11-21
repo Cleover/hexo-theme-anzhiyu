@@ -70,7 +70,7 @@
                   else if tag
                     span.site-card-tag(style=`background-color: ${color}`) #[=tag]
                   else if item.recommend
-                    span.site-card-tag 荐
+                    span.site-card-tag Recomended
                   if i.lost_contact
                     a.cf-friends-link(href=url_for(item.link) title=item.name target="_blank")
                       if theme.lazyload.enable
@@ -104,7 +104,7 @@
                 else if tag
                   span.site-card-tag(style=`background-color: ${color}`) #[=tag]
                 else if item.recommend
-                  span.site-card-tag 荐
+                  span.site-card-tag Recomended
                 a.img.no-text-decoration(target='_blank', title=`${item.name}`, href=`${item.link}`, rel='external nofollow')
                   img.flink-avatar(data-lazy-src=siteshot, onerror=`this.onerror=null;this.src='${theme.default_img}'`, alt=item.name, style="pointer-events: none;", src=`${siteshot}`)
                 a.info.cf-friends-link.no-text-decoration(target='_blank', title=`${item.name}`, href=`${item.link}`, cf-href=url_for(item.link), rel='external nofollow')

@@ -6,3 +6,9 @@
 #rightside > div > button {
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  #rightside > div > button {
+    display: none;
+  }
+}

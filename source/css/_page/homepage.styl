@@ -90,7 +90,7 @@
 
       +maxWidth768()
         width: 100%
-        height: 200px
+        height: 130px;
 
       img.post_bg
         border-radius: 0px
@@ -105,7 +105,7 @@
         +maxWidth768()
           order: 0
     & >.recent-post-info
-      height: 174px;
+      height: 120px;
       width: 100%;
       cursor: pointer;
       position: relative;
@@ -124,7 +124,7 @@
           font-size: 12px;
       +maxWidth768()
         width: 100%
-        min-height: 140px;
+        min-height: 100px;
       &.no-cover
         width: 100%
 
@@ -155,7 +155,7 @@
         else 
           flex-direction: row-reverse
           align-items: center
-          bottom: 30px;
+          bottom: 17px;
         .article-meta
           if hexo-config("post_meta.page.date_type") != 'both'
             margin: 0 8px 0 0;
@@ -288,7 +288,7 @@ if hexo-config('article_double_row') == true
             display: none
         .post_cover
           width: 100%
-          height: 225px
+          height: 150px;
           transition: 1s !important;
           
           img.post_bg

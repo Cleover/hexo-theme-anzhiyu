@@ -90,13 +90,11 @@ if (document.querySelector(".comment-barrage")) {
     barrage.className = "comment-barrage-item";
     barrage.innerHTML = `
           <div class="barrageHead">
-            <a class="barrageTitle ${
-              data.mailMd5 === commentBarrageConfig.mailMd5 ? "barrageBloggerTitle" : ""
-            }" href="javascript:anzhiyu.scrollTo('#post-comment')"">
-              ${data.mailMd5 === commentBarrageConfig.mailMd5 ? "博主" : "热评"}
-            </a>
-            <div class="barrageNick">${data.nick}</div>
-            <img class="nolazyload barrageAvatar" src="https://cravatar.cn/avatar/${data.mailMd5}"/>
+            <div onClick="window.location.hash = '${data.id}'">
+              <img class="nolazyload barrageAvatar" src="https://gravatar.com/avatar/${data.mailMd5}"/>
+              <div class="barrageNick">${data.nick}</div>
+              ${data.mailMd5 === commentBarrageConfig.mailMd5 ? `<a class="barrageTitle barrageBloggerTitle">Admin</a>` : ""}
+            </div>
             <a class="comment-barrage-close" href="javascript:anzhiyu.switchCommentBarrage()"><i class="anzhiyufont anzhiyu-icon-xmark"></i></a>
           </div>
           <anzhiyu class="barrageContent" onClick="window.location.hash = '${data.id}'">
@@ -167,10 +165,10 @@ if (document.querySelector(".comment-barrage")) {
 
   if (localStorage.getItem("commentBarrageSwitch") !== "false") {
     document.querySelector(".comment-barrage").style.display = "flex";
-    document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
+    document.querySelector(".menu-commentBarrage-text").textContent = "Hide Popup Comments";
   } else {
     document.querySelector(".comment-barrage").style.display = "none";
-    document.querySelector(".menu-commentBarrage-text").textContent = "显示热评";
+    document.querySelector(".menu-commentBarrage-text").textContent = "Show Popup Comments";
   }
 
   document.addEventListener("pjax:send", function () {

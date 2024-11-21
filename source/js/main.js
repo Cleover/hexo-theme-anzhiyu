@@ -550,7 +550,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isInViewPortOfOneNoDis(pageBottomDomFlag || percentage > 90) && currentTop > 20) {
         $navTotop.classList.add("long");
-        $percentBtn.textContent = "返回顶部";
+        $percentBtn.textContent = "Top";
       } else {
         $navTotop.classList.remove("long");
         $percentBtn.textContent = percentage;
@@ -786,9 +786,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menuDarkmodeText = $rightMenu.querySelector(".menu-darkmode-text");
     if (mode === "light") {
-      menuDarkmodeText.textContent = "深色模式";
+      menuDarkmodeText.textContent = "Dark Mode";
     } else {
-      menuDarkmodeText.textContent = "浅色模式";
+      menuDarkmodeText.textContent = "Light Mode";
     }
 
     if (!GLOBAL_CONFIG_SITE.isPost) {
@@ -1669,7 +1669,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clearTimeout(titleTime);
       } else {
         //返回当前页面时标签显示内容
-        document.title = backTitle + OriginTitile;
+        document.title = backTitle;
         //两秒后变回正常标题
         titleTime = setTimeout(function () {
           document.title = OriginTitile;
